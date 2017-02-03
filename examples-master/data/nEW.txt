@@ -1,0 +1,3 @@
+hI 
+TEMP :  80 DEG
+Rainfall level : 50 cm

@@ -1,0 +1,27 @@
+<html>
+	<head><center> <u>Hello!!</u></center>
+	<script src="jquery-3.1.1.js"></script></head>
+	<body>
+		<center><br><br><textarea id="tx" cols="50" rows="30"></textarea></center>
+	</body>
+	<script>
+	function fun(){
+		$.ajax({
+			
+  url: "http://127.0.0.1:8081/",
+method: "POST",
+  data:JSON.stringify({ name: "Example",id:10,no:9} )
+})
+  .done(function( data ) {
+   $("#tx").val(data);
+var millisecondsToWait = 1000;
+setTimeout(function() {
+  fun();
+}, millisecondsToWait);
+
+		});
+	}
+		fun();
+		
+		</script>
+</html>
